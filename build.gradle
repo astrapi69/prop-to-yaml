@@ -30,7 +30,7 @@ gradle.startParameter.excludedTaskNames += "licenseMain"
 gradle.startParameter.excludedTaskNames += "licenseTest"
 
 group "de.alpharogroup"
-version "1.0-SNAPSHOT"
+version "1"
 sourceCompatibility = 11
 
 repositories {
