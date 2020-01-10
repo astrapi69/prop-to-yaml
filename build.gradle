@@ -147,6 +147,10 @@ publishing {
     }
 }
 
+signing {
+    sign publishing.publications.mavenJava
+}
+
 test {
     useTestNG()
 }
