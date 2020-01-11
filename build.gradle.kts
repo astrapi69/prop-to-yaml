@@ -20,7 +20,7 @@ plugins {
 }
 
 group = "de.alpharogroup"
-version = "1.0-SNAPSHOT"
+version = "1.1-SNAPSHOT"
 description = "prop-to-yaml"
 
 repositories {
