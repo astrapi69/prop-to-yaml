@@ -1,12 +1,13 @@
 import org.gradle.jvm.tasks.Jar
 import java.net.URI
 
-val snakeyamlVersion = "1.25"
-val sillyCollectionsVersion = "6"
-val fileWorkerVersion = "5.4"
-val testngVersion = "7.1.1"
-val junitVersion = "4.13"
-val meanbeanVersion = "2.0.3"
+val snakeyamlVersion: String by project
+val sillyCollectionsVersion: String by project
+val fileWorkerVersion: String by project
+val testngVersion: String by project
+val junitVersion: String by project
+val meanbeanVersion: String by project
+val kotlinVersion: String by project
 
 plugins {
     signing
