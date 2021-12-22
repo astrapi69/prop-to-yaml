@@ -1,7 +1,15 @@
-package de.alpharogroup.prop.to.yaml
+/**
+ * Copyright (C) 2015 Asterios Raptis
+ *
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
+package io.github.astrapi69.prop.to.yaml
 
-import de.alpharogroup.prop.to.yaml.path.Item
-import de.alpharogroup.prop.to.yaml.path.PathElementExtensions
+import io.github.astrapi69.prop.to.yaml.path.Item
+import io.github.astrapi69.prop.to.yaml.path.PathElementExtensions
 import org.yaml.snakeyaml.DumperOptions
 import org.yaml.snakeyaml.Yaml
 import java.io.File

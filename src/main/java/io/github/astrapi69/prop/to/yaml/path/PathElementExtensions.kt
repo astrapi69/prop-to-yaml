@@ -1,8 +1,16 @@
-package de.alpharogroup.prop.to.yaml.path
+/**
+ * Copyright (C) 2015 Asterios Raptis
+ *
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
+package io.github.astrapi69.prop.to.yaml.path
 
-import de.alpharogroup.collections.list.ListFactory
-import de.alpharogroup.prop.to.yaml.ValueAtIndex
-import de.alpharogroup.prop.to.yaml.ValueAtKey
+import io.github.astrapi69.collections.list.ListFactory
+import io.github.astrapi69.prop.to.yaml.ValueAtIndex
+import io.github.astrapi69.prop.to.yaml.ValueAtKey
 import java.util.*
 
 object PathElementExtensions {
