@@ -6,11 +6,11 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package de.alpharogroup.prop.to.yaml.path
+package io.github.astrapi69.prop.to.yaml.path
 
-import de.alpharogroup.collections.list.ListFactory
-import de.alpharogroup.prop.to.yaml.ValueAtIndex
-import de.alpharogroup.prop.to.yaml.ValueAtKey
+import io.github.astrapi69.collections.list.ListFactory
+import io.github.astrapi69.prop.to.yaml.ValueAtIndex
+import io.github.astrapi69.prop.to.yaml.ValueAtKey
 import java.util.*
 
 object PathElementExtensions {

@@ -6,10 +6,10 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package de.alpharogroup.prop.to.yaml
+package io.github.astrapi69.prop.to.yaml
 
-import de.alpharogroup.prop.to.yaml.path.Item
-import de.alpharogroup.prop.to.yaml.path.PathElementExtensions
+import io.github.astrapi69.prop.to.yaml.path.Item
+import io.github.astrapi69.prop.to.yaml.path.PathElementExtensions
 import org.yaml.snakeyaml.DumperOptions
 import org.yaml.snakeyaml.Yaml
 import java.io.File

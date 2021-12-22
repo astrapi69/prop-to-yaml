@@ -6,10 +6,10 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package de.alpharogroup.prop.to.yaml.path
+package io.github.astrapi69.prop.to.yaml.path
 
-import de.alpharogroup.collections.list.ListExtensions
-import de.alpharogroup.collections.list.ListFactory
+import io.github.astrapi69.collections.list.ListExtensions
+import io.github.astrapi69.collections.list.ListFactory
 
 class Item {
     private val elements: MutableList<Element?>

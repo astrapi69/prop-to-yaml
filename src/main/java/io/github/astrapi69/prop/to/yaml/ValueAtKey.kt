@@ -6,10 +6,10 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package de.alpharogroup.prop.to.yaml
+package io.github.astrapi69.prop.to.yaml
 
-import de.alpharogroup.prop.to.yaml.path.Element
-import de.alpharogroup.prop.to.yaml.path.ElementType
+import io.github.astrapi69.prop.to.yaml.path.Element
+import io.github.astrapi69.prop.to.yaml.path.ElementType
 
 class ValueAtKey(override val valueCode: String?) : Element {
     override fun toNavigationString(): String {

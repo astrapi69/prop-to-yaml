@@ -6,12 +6,12 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package de.alpharogroup.prop.to.yaml
+package io.github.astrapi69.prop.to.yaml
 
-import de.alpharogroup.file.search.PathFinder
-import de.alpharogroup.prop.to.yaml.PropertiesToYamlConverter.convert
-import org.testng.Assert
-import org.testng.annotations.Test
+import io.github.astrapi69.file.search.PathFinder
+import io.github.astrapi69.prop.to.yaml.PropertiesToYamlConverter.convert
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 import java.io.File
 
 class PropertiesToYamlConverterTest {
@@ -30,7 +30,7 @@ class PropertiesToYamlConverterTest {
                 "    second: /v1/second\n" +
                 "  - first: /v1/public/first\n" +
                 "    second: /v1/public/second\n"
-        Assert.assertEquals(actual, expected)
+        assertEquals(actual, expected)
     }
 
     @Test
@@ -46,6 +46,6 @@ class PropertiesToYamlConverterTest {
                 "    port: '18443'\n" +
                 "configuration:\n" +
                 "  type: DEVELOPMENT\n"
-        Assert.assertEquals(actual, expected)
+        assertEquals(actual, expected)
     }
 }
