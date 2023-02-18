@@ -39,13 +39,13 @@ your project `build.gradle` if you want to import the core functionality of prop
 define version in file gradle.properties
 
 ```
-propToYamlVersion=1.2
+propToYamlVersion=2
 ```
 
 or in build.gradle ext area
 
 ```
-    propToYamlVersion = "1.2"
+    propToYamlVersion = "2"
 ```
 
 then add the dependency to the dependencies area
@@ -65,23 +65,23 @@ functionality of prop-to-yaml:
 
 Than you can add the dependency to your dependencies:
 
-	<properties>
-			...
-		<!-- prop-to-yaml version -->
-		<prop-to-yaml.version>1.2</prop-to-yaml.version>
-			...
-	</properties>
-			...
-		<dependencies>
-			...
-			<!-- prop-to-yaml DEPENDENCY -->
-			<dependency>
-				<groupId>io.github.astrapi69</groupId>
-				<artifactId>prop-to-yaml</artifactId>
-				<version>${prop-to-yaml.version}</version>
-			</dependency>
-			...
-		</dependencies>
+    <properties>
+            ...
+        <!-- prop-to-yaml version -->
+        <prop-to-yaml.version>2</prop-to-yaml.version>
+            ...
+    </properties>
+            ...
+        <dependencies>
+            ...
+            <!-- prop-to-yaml DEPENDENCY -->
+            <dependency>
+                <groupId>io.github.astrapi69</groupId>
+                <artifactId>prop-to-yaml</artifactId>
+                <version>${prop-to-yaml.version}</version>
+            </dependency>
+            ...
+        </dependencies>
 
 # Donations
 
@@ -167,5 +167,3 @@ Don't forget to add new units tests on your changes.
 
 Do not hesitate to contact the prop-to-yaml developers with your questions, concerns, comments, bug reports, or feature requests.
 - Feature requests, questions and bug reports can be reported at the [issues page](https://github.com/astrapi69/prop-to-yaml/issues).
-
-
