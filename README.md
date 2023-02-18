@@ -39,13 +39,13 @@ your project `build.gradle` if you want to import the core functionality of prop
 define version in file gradle.properties
 
 ```
-propToYamlVersion=1.2
+propToYamlVersion=2
 ```
 
 or in build.gradle ext area
 
 ```
-    propToYamlVersion = "1.2"
+    propToYamlVersion = "2"
 ```
 
 then add the dependency to the dependencies area
@@ -68,7 +68,7 @@ Than you can add the dependency to your dependencies:
     <properties>
             ...
         <!-- prop-to-yaml version -->
-        <prop-to-yaml.version>1.2</prop-to-yaml.version>
+        <prop-to-yaml.version>2</prop-to-yaml.version>
             ...
     </properties>
             ...
