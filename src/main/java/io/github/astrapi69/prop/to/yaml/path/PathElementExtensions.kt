@@ -8,7 +8,7 @@
  */
 package io.github.astrapi69.prop.to.yaml.path
 
-import io.github.astrapi69.collections.list.ListFactory
+import io.github.astrapi69.collection.list.ListFactory
 import io.github.astrapi69.prop.to.yaml.ValueAtIndex
 import io.github.astrapi69.prop.to.yaml.ValueAtKey
 import java.util.*

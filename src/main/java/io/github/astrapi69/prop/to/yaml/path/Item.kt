@@ -8,8 +8,8 @@
  */
 package io.github.astrapi69.prop.to.yaml.path
 
-import io.github.astrapi69.collections.list.ListExtensions
-import io.github.astrapi69.collections.list.ListFactory
+import io.github.astrapi69.collection.list.ListExtensions
+import io.github.astrapi69.collection.list.ListFactory
 
 class Item {
     private val elements: MutableList<Element?>
