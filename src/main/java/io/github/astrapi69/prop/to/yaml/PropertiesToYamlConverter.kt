@@ -20,11 +20,15 @@ import java.util.*
 
 object PropertiesToYamlConverter {
     @JvmStatic
-    fun convert(file: File): String {
+    fun convert(content: String): String {
         val p = Properties()
-        val content = String(Files.readAllBytes(Paths.get(file.toURI())))
         p.load(StringReader(content))
         return convert(p)
+    }
+    @JvmStatic
+    fun convert(file: File): String {
+        val content = String(Files.readAllBytes(Paths.get(file.toURI())))
+        return convert(content)
     }
     @JvmStatic
     fun convert(p: Properties): String {
