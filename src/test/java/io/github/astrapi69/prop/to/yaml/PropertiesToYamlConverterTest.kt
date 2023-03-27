@@ -80,5 +80,17 @@ class PropertiesToYamlConverterTest {
                 "  - first: /v1/public/first\n" +
                 "    second: /v1/public/second\n"
         assertEquals(actual, expected)
+
+        propertiesFile = File(PathFinder.getSrcTestResourcesDir(), "multiline-values.properties")
+        content = String(Files.readAllBytes(Paths.get(propertiesFile.toURI())))
+        actual = convert(content)
+        expected = // language=yaml
+                        "foo:\n" +
+                        "  bar: |-\n" +
+                        "    first line\n" +
+                        "    second line\n" +
+                        "    last line\n" +
+                        "primes: 2,3, 5,7,11, 13,17\n"
+        assertEquals(actual, expected)
     }
 }
