@@ -1,0 +1,33 @@
+[versions]
+file-worker-version = "11.6"
+gradle-plugin-grgit-version = "5.2.2"
+gradle-plugin-license-version = "0.16.1"
+gradle-plugin-spotless-version = "7.0.0.BETA1"
+gradle-plugin-version-catalog-update-version = "0.8.4"
+gradle-plugin-versions-version = "0.51.0"
+gradle-plugin-kotlin-version = "2.0.0"
+junit-jupiter-version = "5.11.0-M2"
+junit-platform-launcher-version = "1.11.0-M2"
+silly-collection-version = "21"
+snakeyaml-version = "1.33"
+
+[libraries]
+file-worker = { module = "io.github.astrapi69:file-worker", version.ref = "file-worker-version" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter-version" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform-launcher-version" }
+kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8" }
+silly-collection = { module = "io.github.astrapi69:silly-collection", version.ref = "silly-collection-version" }
+snakeyaml = { module = "org.yaml:snakeyaml", version.ref = "snakeyaml-version" }
+
+[bundles]
+unit-testing = [
+    "junit-jupiter",
+]
+
+[plugins]
+gradle-versions-plugin = { id = "com.github.ben-manes.versions", version.ref = "gradle-plugin-versions-version" }
+grgit-gradle = { id = "org.ajoberstar.grgit", version.ref = "gradle-plugin-grgit-version" }
+license-gradle-plugin = { id = "com.github.hierynomus.license", version.ref = "gradle-plugin-license-version" }
+spotless-plugin-gradle = { id = "com.diffplug.spotless", version.ref = "gradle-plugin-spotless-version" }
+version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "gradle-plugin-version-catalog-update-version" }
+kotlin-gradle-plugin = { id = "org.jetbrains.kotlin.jvm", version.ref = "gradle-plugin-kotlin-version"}

@@ -37,11 +37,10 @@ class PropertiesToYamlConverterTest {
 
     @Test
     fun testConvert() {
-        val expected: String
         val actual: String
         val propertiesFile = File(PathFinder.getSrcTestResourcesDir(), "config.properties")
         actual = convert(propertiesFile)
-        expected = "application:\n" +
+        val expected: String = "application:\n" +
                 "  http:\n" +
                 "    port: '18080'\n" +
                 "  https:\n" +
