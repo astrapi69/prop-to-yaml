@@ -14,4 +14,7 @@ spotless {
         importOrderFile('src/test/resources/spotless/importorder.properties') // import order file as exported from eclipse
         eclipse("4.21").configFile("src/test/resources/spotless/alpharo-formatter.xml")
     }
+    kotlin {
+        ktfmt()
+    }
 }

@@ -1,9 +1,8 @@
 /**
  * Copyright (C) 2015 Asterios Raptis
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
 package io.github.astrapi69.prop.to.yaml
@@ -12,37 +11,36 @@ import io.github.astrapi69.prop.to.yaml.path.Element
 import io.github.astrapi69.prop.to.yaml.path.ElementType
 
 class ValueAtIndex(private val index: Int) : Element {
-    override fun toNavigationString(): String {
-        return "[$index]"
-    }
+  override fun toNavigationString(): String {
+    return "[$index]"
+  }
 
-    override fun toPropString(): String? {
-        return "[$index]"
-    }
+  override fun toPropString(): String? {
+    return "[$index]"
+  }
 
-    override val type: ElementType
-        get() = ElementType.VALUE_AT_INDEX
+  override val type: ElementType
+    get() = ElementType.VALUE_AT_INDEX
 
-    override fun toIndex(): Int? {
-        return index
-    }
+  override fun toIndex(): Int? {
+    return index
+  }
 
-    override fun hashCode(): Int {
-        val prime = 31
-        var result = 1
-        result = prime * result + index
-        return result
-    }
+  override fun hashCode(): Int {
+    val prime = 31
+    var result = 1
+    result = prime * result + index
+    return result
+  }
 
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (other == null) return false
-        if (javaClass != other.javaClass) return false
-        val otherValue = other as ValueAtIndex
-        return index == otherValue.index
-    }
+  override fun equals(other: Any?): Boolean {
+    if (this === other) return true
+    if (other == null) return false
+    if (javaClass != other.javaClass) return false
+    val otherValue = other as ValueAtIndex
+    return index == otherValue.index
+  }
 
-    override val valueCode: String?
-        get() = "" + index
-
+  override val valueCode: String?
+    get() = "" + index
 }

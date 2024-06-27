@@ -1,61 +1,62 @@
 /**
  * Copyright (C) 2015 Asterios Raptis
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
 package io.github.astrapi69.prop.to.yaml
 
 import io.github.astrapi69.prop.to.yaml.path.Item
 import io.github.astrapi69.prop.to.yaml.path.PathElementExtensions
-import org.yaml.snakeyaml.DumperOptions
-import org.yaml.snakeyaml.Yaml
 import java.io.File
 import java.io.StringReader
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.util.*
+import org.yaml.snakeyaml.DumperOptions
+import org.yaml.snakeyaml.Yaml
 
 object PropertiesToYamlConverter {
-    @JvmStatic
-    fun convert(content: String): String {
-        val p = Properties()
-        p.load(StringReader(content))
-        return convert(p)
-    }
-    @JvmStatic
-    fun convert(file: File): String {
-        val content = String(Files.readAllBytes(Paths.get(file.toURI())))
-        return convert(content)
-    }
-    @JvmStatic
-    fun convert(p: Properties): String {
-        val propertiesMap: MutableMap<String, Collection<String>> = HashMap()
-        for ((key, value) in p) {
-            val s: MutableSet<String> = LinkedHashSet()
-            s.add(value as String)
-            propertiesMap[key as String] = s
-        }
-        return convert(propertiesMap)
-    }
+  @JvmStatic
+  fun convert(content: String): String {
+    val p = Properties()
+    p.load(StringReader(content))
+    return convert(p)
+  }
 
-    fun convert(properties: Map<String, Collection<String>>): String {
-        if (properties.isEmpty()) {
-            return ""
-        }
-        val root = Builder(Item())
-        for ((key, value) in properties) {
-            for (v in value) {
-                root.addProperty(PathElementExtensions.fromProperty(key), v)
-            }
-        }
-        val `object` = root.build()
-        val options = DumperOptions()
-        options.defaultFlowStyle = DumperOptions.FlowStyle.BLOCK
-        options.isPrettyFlow = true
-        val yaml = Yaml(options)
-        return yaml.dump(`object`)
+  @JvmStatic
+  fun convert(file: File): String {
+    val content = String(Files.readAllBytes(Paths.get(file.toURI())))
+    return convert(content)
+  }
+
+  @JvmStatic
+  fun convert(p: Properties): String {
+    val propertiesMap: MutableMap<String, Collection<String>> = HashMap()
+    for ((key, value) in p) {
+      val s: MutableSet<String> = LinkedHashSet()
+      s.add(value as String)
+      propertiesMap[key as String] = s
     }
+    return convert(propertiesMap)
+  }
+
+  fun convert(properties: Map<String, Collection<String>>): String {
+    if (properties.isEmpty()) {
+      return ""
+    }
+    val root = Builder(Item())
+    for ((key, value) in properties) {
+      for (v in value) {
+        root.addProperty(PathElementExtensions.fromProperty(key), v)
+      }
+    }
+    val `object` = root.build()
+    val options = DumperOptions()
+    options.defaultFlowStyle = DumperOptions.FlowStyle.BLOCK
+    options.isPrettyFlow = true
+    val yaml = Yaml(options)
+    return yaml.dump(`object`)
+  }
 }
