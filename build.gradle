@@ -49,3 +49,15 @@ tasks.withType(JavaCompile).configureEach { javaCompiler ->
     // uncomment the next line for build with compiler argument -Xlint:unchecked
     // options.compilerArgs << "-Xlint:unchecked"
 }
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
