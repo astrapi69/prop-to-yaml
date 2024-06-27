@@ -15,7 +15,6 @@ snakeyaml-version = "2.2"
 file-worker = { module = "io.github.astrapi69:file-worker", version.ref = "file-worker-version" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter-version" }
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform-launcher-version" }
-kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8" }
 silly-collection = { module = "io.github.astrapi69:silly-collection", version.ref = "silly-collection-version" }
 snakeyaml = { module = "org.yaml:snakeyaml", version.ref = "snakeyaml-version" }
 

@@ -7,17 +7,17 @@ buildscript {
 }
 
 plugins {
+    id 'jacoco'
     id 'java'
     id 'java-library'
     id 'maven-publish'
     id 'signing'
-    id 'jacoco'
     alias(libs.plugins.gradle.versions.plugin)
-    alias(libs.plugins.license.gradle.plugin)
     alias(libs.plugins.grgit.gradle)
+    alias(libs.plugins.kotlin.gradle.plugin)
+    alias(libs.plugins.license.gradle.plugin)
     alias(libs.plugins.spotless.plugin.gradle)
     alias(libs.plugins.version.catalog.update)
-    alias(libs.plugins.kotlin.gradle.plugin)
 }
 
 group = "$groupPackage" as Object
@@ -48,16 +48,4 @@ tasks.withType(JavaCompile).configureEach { javaCompiler ->
     // options.compilerArgs << "-Xlint:deprecation"
     // uncomment the next line for build with compiler argument -Xlint:unchecked
     // options.compilerArgs << "-Xlint:unchecked"
-}
-
-compileKotlin {
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-}
-
-compileTestKotlin {
-    kotlinOptions {
-        jvmTarget = "17"
-    }
 }

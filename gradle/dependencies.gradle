@@ -1,6 +1,5 @@
 dependencies {
 
-    implementation libs.kotlin.stdlib.jdk8
     implementation libs.snakeyaml
 
     implementation libs.silly.collection
